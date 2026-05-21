@@ -23,7 +23,7 @@ export const teamData: TeamMember[] = [
     role: "iOS & KI/ML Experte",
     description:
       "Mobile Entwicklung (Android, iOS), Augmented Reality, KI-Entwicklung.",
-    imageSrc: "/images/lennart.png",
+    imageSrc: "/images/lennart.jpg",
     imageAlt: "Lennart Busch, Gründer Cubeon Solutions",
   },
   {
@@ -32,7 +32,7 @@ export const teamData: TeamMember[] = [
     role: "Web/Backend & Geschäftsführer",
     description:
       "Frontend-Entwicklung (Web, Mobile), Datenbank-Design, skalierbare Backend-Architekturen.",
-    imageSrc: "/images/ludwig.png",
+    imageSrc: "/images/ludwig.jpg",
     imageAlt: "Ludwig Chen Li, Geschäftsführer Cubeon Solutions",
   },
 ];
