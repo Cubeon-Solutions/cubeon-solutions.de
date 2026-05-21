@@ -40,15 +40,17 @@ export default function DatenschutzPage() {
             Sicherheit), ggf. Art. 6 Abs. 1 lit. a DSGVO (Einwilligung).
           </p>
 
-          <h2>3. Hosting (Vercel, USA/EU)</h2>
+          <h2>3. Hosting (Vercel)</h2>
           <p>
-            Diese Website wird bei <strong>Vercel Inc.</strong> gehostet.
-            Vercel kann Serverdaten (inkl. IP-Adressen) verarbeiten.
-            Die Verarbeitung erfolgt zur technischen Bereitstellung und
-            Absicherung dieses Online-Angebots (Art. 6 Abs. 1 lit. f DSGVO).
-            Mit Vercel besteht ein Data Processing Agreement gemäß Art. 28
-            DSGVO. Datenübermittlungen in die USA erfolgen auf Basis der
-            EU-Standardvertragsklauseln.
+            Diese Website wird bei <strong>Vercel Inc.</strong> (340 Pine Street,
+            Suite 701, San Francisco, CA 94104, USA) gehostet. Vercel kann
+            Zugriffsdaten inkl. IP-Adressen verarbeiten. Die Verarbeitung
+            erfolgt zur technischen Bereitstellung und Absicherung dieses
+            Online-Angebots (Art. 6 Abs. 1 lit. f DSGVO). Mit Vercel besteht
+            ein Data Processing Agreement gemäß Art. 28 DSGVO.
+            Datenübermittlungen in die USA erfolgen auf Basis der
+            EU-Standardvertragsklauseln. Weitere Informationen:{" "}
+            <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Vercel Datenschutzerklärung</a>.
           </p>
 
           <h2>4. Server-Logfiles</h2>
@@ -65,25 +67,48 @@ export default function DatenschutzPage() {
             <strong>Speicherdauer:</strong> 14 Tage.
           </p>
 
-          <h2>5. Kontaktformular und E-Mail</h2>
+          <h2>5. Kontaktmöglichkeiten</h2>
           <p>
-            Wenn Sie uns über das Kontaktformular oder per E-Mail kontaktieren,
-            verarbeiten wir Ihre Angaben zur Bearbeitung der Anfrage (Art. 6
-            Abs. 1 lit. b bzw. f DSGVO).
+            Wenn Sie uns über das Kontaktformular, per E-Mail oder WhatsApp
+            kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung der
+            Anfrage (Art. 6 Abs. 1 lit. b bzw. f DSGVO).
           </p>
           <p>
-            Das Kontaktformular wird über <strong>Formspree Inc.</strong>{" "}
-            (USA) bereitgestellt. Beim Absenden des Formulars werden Ihre
-            Angaben an Formspree übermittelt, die diese in unserem Auftrag
-            verarbeiten. Mit Formspree besteht ein Data Processing Agreement.
-            Die Übermittlung in die USA erfolgt auf Basis der
-            EU-Standardvertragsklauseln. Weitere Informationen:{" "}
+            <strong>WhatsApp:</strong> Auf unserer Website bieten wir die
+            Kontaktaufnahme über WhatsApp an. Betreiber ist die{" "}
+            <strong>WhatsApp Ireland Limited</strong> (4 Grand Canal Square,
+            Grand Canal Harbour, Dublin 2, Irland), ein Tochterunternehmen
+            von Meta Platforms Inc. Wenn Sie uns über WhatsApp kontaktieren,
+            verarbeitet WhatsApp Ihre Telefonnummer, Nachrichteninhalte sowie
+            Metadaten gemäß den eigenen Nutzungsbedingungen und
+            Datenschutzrichtlinien. Wir haben keinen Einfluss auf diese
+            Datenverarbeitung durch WhatsApp/Meta. Rechtsgrundlage für unsere
+            Verarbeitung der übermittelten Inhalte ist Art. 6 Abs. 1 lit. b
+            bzw. f DSGVO. Weitere Informationen:{" "}
             <a
-              href="https://formspree.io/legal/privacy-policy"
+              href="https://www.whatsapp.com/legal/privacy-policy"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Formspree Datenschutzerklärung
+              WhatsApp Datenschutzrichtlinie
+            </a>
+            .
+          </p>
+          <p>
+            Für den Versand von Formularanfragen per E-Mail nutzen wir den
+            Dienst <strong>Resend</strong> (Resend Inc., 2261 Market Street
+            #5039, San Francisco, CA 94114, USA). Beim Absenden des Formulars
+            werden Ihre Angaben (Name, E-Mail-Adresse, Nachricht) zur
+            Zustellung an uns an Resend übermittelt. Mit Resend besteht ein
+            Data Processing Agreement gemäß Art. 28 DSGVO. Die Übermittlung
+            in die USA erfolgt auf Basis der EU-Standardvertragsklauseln.
+            Weitere Informationen:{" "}
+            <a
+              href="https://resend.com/legal/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resend Datenschutzerklärung
             </a>
             .
           </p>
@@ -93,16 +118,24 @@ export default function DatenschutzPage() {
             entgegenstehen.
           </p>
 
-          <h2>6. Cookies &amp; Tracking</h2>
+          <h2>6. Analyse (Vercel Analytics)</h2>
           <p>
-            Wir setzen <strong>keine</strong> Tracking-Cookies ein und
-            verwenden keine Analyse- oder Marketing-Dienste.
+            Wir nutzen <strong>Vercel Analytics</strong>, einen
+            datenschutzfreundlichen Analysedienst der Vercel Inc. (USA).
+            Vercel Analytics setzt <strong>keine Cookies</strong> und erhebt
+            keine personenbezogenen Daten. Es werden ausschließlich aggregierte,
+            anonymisierte Zugriffsdaten erfasst (aufgerufene Seiten,
+            Herkunftsland, Gerätekategorie, Referrer). Eine Identifizierung
+            einzelner Personen ist nicht möglich. Die Verarbeitung erfolgt auf
+            Basis unseres berechtigten Interesses an der Analyse und
+            Verbesserung unseres Online-Angebots (Art. 6 Abs. 1 lit. f DSGVO).
+            Ein Cookie-Banner ist nicht erforderlich.
           </p>
 
           <h2>7. Empfänger von Daten</h2>
           <p>
             Eine Weitergabe erfolgt nur, soweit dies für die o.g. Zwecke
-            erforderlich ist (Hosting, Formspree) oder eine rechtliche
+            erforderlich ist (Vercel, Resend) oder eine rechtliche
             Verpflichtung besteht.
           </p>
 
@@ -149,6 +182,7 @@ export default function DatenschutzPage() {
             <li><Link href="/datenschutz/awakesync">AwakeSync</Link></li>
             <li><Link href="/datenschutz/sociogramly">Sociogramly</Link></li>
             <li><Link href="/datenschutz/homespot">HomeSpot</Link></li>
+            <li><Link href="/datenschutz/nd-filter">ND Filter</Link></li>
           </ul>
 
           <hr />
@@ -173,11 +207,14 @@ export default function DatenschutzPage() {
             Art. 6 (1)(a) GDPR.
           </p>
 
-          <h2>3. Hosting (Vercel, USA/EU)</h2>
+          <h2>3. Hosting (Vercel)</h2>
           <p>
-            This website is hosted by <strong>Vercel Inc.</strong> A data
-            processing agreement pursuant to Art. 28 GDPR is in place.
-            Transfers to the USA are based on EU Standard Contractual Clauses.
+            This website is hosted by <strong>Vercel Inc.</strong> (340 Pine
+            Street, Suite 701, San Francisco, CA 94104, USA). Vercel may
+            process access data including IP addresses. A data processing
+            agreement pursuant to Art. 28 GDPR is in place. Transfers to the
+            USA are based on EU Standard Contractual Clauses. See the{" "}
+            <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Vercel Privacy Policy</a>.
           </p>
 
           <h2>4. Server Log Files</h2>
@@ -187,24 +224,50 @@ export default function DatenschutzPage() {
             Legal basis: Art. 6 (1)(f) GDPR.
           </p>
 
-          <h2>5. Contact Form and E-Mail</h2>
+          <h2>5. Contact Options</h2>
           <p>
-            The contact form is provided by <strong>Formspree Inc.</strong>{" "}
-            (USA). Submissions are forwarded to Formspree under a data
-            processing agreement. Transfers to the USA are based on EU
-            Standard Contractual Clauses. See{" "}
+            <strong>WhatsApp:</strong> We offer contact via WhatsApp, operated
+            by <strong>WhatsApp Ireland Limited</strong> (a Meta subsidiary).
+            When you contact us via WhatsApp, your phone number, message
+            content, and metadata are processed by WhatsApp/Meta under their
+            own terms. We have no influence over this processing. Legal basis
+            for our processing of the content you send: Art. 6 (1)(b) or (f)
+            GDPR. See the{" "}
             <a
-              href="https://formspree.io/legal/privacy-policy"
+              href="https://www.whatsapp.com/legal/privacy-policy"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Formspree Privacy Policy
+              WhatsApp Privacy Policy
+            </a>
+            .
+          </p>
+          <p>
+            For sending contact form submissions by e-mail we use{" "}
+            <strong>Resend</strong> (Resend Inc., San Francisco, CA, USA).
+            Your details (name, e-mail address, message) are transmitted to
+            Resend for delivery to us. A data processing agreement pursuant
+            to Art. 28 GDPR is in place. Transfers to the USA are based on
+            EU Standard Contractual Clauses. See{" "}
+            <a
+              href="https://resend.com/legal/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resend Privacy Policy
             </a>
             .
           </p>
 
-          <h2>6. Cookies &amp; Tracking</h2>
-          <p>We do not use tracking cookies or analytics services.</p>
+          <h2>6. Analytics (Vercel Analytics)</h2>
+          <p>
+            We use <strong>Vercel Analytics</strong>, a privacy-friendly
+            analytics service by Vercel Inc. (USA). It sets no cookies and
+            collects no personal data — only aggregated, anonymised metrics
+            (pages visited, country, device type, referrer). Individual users
+            cannot be identified. Legal basis: Art. 6 (1)(f) GDPR (legitimate
+            interest in improving our website). No cookie banner required.
+          </p>
 
           <h2>7. Your Rights</h2>
           <p>

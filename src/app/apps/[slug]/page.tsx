@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { appsData } from "@/lib/data/apps";
 import AppStoreBadge from "@/components/ui/AppStoreBadge";
+import PlayStoreBadge from "@/components/ui/PlayStoreBadge";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import JsonLd from "@/components/seo/JsonLd";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -35,8 +37,25 @@ export default async function AppPage({ params }: Props) {
   const app = appsData.find((a) => a.slug === slug);
   if (!app) notFound();
 
+  const appSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: app.title,
+    description: app.longDescription,
+    operatingSystem: "iOS",
+    applicationCategory: "MobileApplication",
+    offers: {
+      "@type": "Offer",
+      price: app.schemaPrice ?? "0",
+      priceCurrency: "EUR",
+    },
+    url: app.appStoreUrl,
+    image: `https://www.cubeon-solutions.de${app.imageSrc}`,
+  };
+
   return (
     <>
+      <JsonLd data={appSchema} />
       <Navbar />
       <main className="pt-20">
         {/* Hero */}
@@ -70,7 +89,15 @@ export default async function AppPage({ params }: Props) {
                 <p className="text-lg text-[var(--color-body)] leading-relaxed mb-6">
                   {app.longDescription}
                 </p>
-                <AppStoreBadge url={app.appStoreUrl} size="md" />
+                <div className="flex flex-wrap gap-3">
+                  <AppStoreBadge url={app.appStoreUrl} size="md" />
+                  {app.playStoreUrl && <PlayStoreBadge url={app.playStoreUrl} size="md" />}
+                </div>
+                {app.pricingInfo && (
+                  <p className="mt-2 text-sm text-[var(--color-muted)]">
+                    {app.pricingInfo}
+                  </p>
+                )}
               </div>
             </div>
           </div>
@@ -103,7 +130,15 @@ export default async function AppPage({ params }: Props) {
             <h2 className="text-2xl font-bold text-[var(--color-heading)]">
               Jetzt herunterladen
             </h2>
-            <AppStoreBadge url={app.appStoreUrl} size="md" />
+            <div className="flex flex-wrap justify-center gap-3">
+              <AppStoreBadge url={app.appStoreUrl} size="md" />
+              {app.playStoreUrl && <PlayStoreBadge url={app.playStoreUrl} size="md" />}
+            </div>
+            {app.pricingInfo && (
+              <p className="text-sm text-[var(--color-muted)]">
+                {app.pricingInfo}
+              </p>
+            )}
             <div className="flex gap-4 text-sm text-[var(--color-muted)]">
               <Link
                 href={app.privacyUrl}

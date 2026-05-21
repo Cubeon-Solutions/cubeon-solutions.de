@@ -4,9 +4,11 @@ import { appsData } from "@/lib/data/apps";
 const BASE_URL = "https://www.cubeon-solutions.de";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const LAUNCH_DATE = new Date("2026-05-21");
+
   const appPages = appsData.map((app) => ({
     url: `${BASE_URL}/apps/${app.slug}`,
-    lastModified: new Date(),
+    lastModified: LAUNCH_DATE,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
@@ -14,21 +16,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: BASE_URL,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      lastModified: LAUNCH_DATE,
+      changeFrequency: "monthly" as const,
       priority: 1.0,
     },
     ...appPages,
     {
       url: `${BASE_URL}/datenschutz`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
+      lastModified: LAUNCH_DATE,
+      changeFrequency: "yearly" as const,
       priority: 0.3,
     },
     {
       url: `${BASE_URL}/impressum`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
+      lastModified: LAUNCH_DATE,
+      changeFrequency: "yearly" as const,
       priority: 0.3,
     },
   ];

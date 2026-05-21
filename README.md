@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# cubeon-solutions.de
 
-## Getting Started
+Website of **Cubeon Solutions UG** — built with Next.js 16, Tailwind CSS v4, deployed on Vercel.
 
-First, run the development server:
+## Tech stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Styling | Tailwind CSS v4 |
+| Contact form | Resend (via `/api/contact` Route Handler) |
+| Analytics | Vercel Analytics (cookie-free) |
+| Deployment | Vercel |
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The contact form requires a `RESEND_API_KEY`. Without it the API returns a 503 — everything else works locally.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create `.env.local` in the project root:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+RESEND_API_KEY=re_your_key_here
+```
 
-## Learn More
+## Environment variables
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Required | Description |
+|---|---|---|
+| `RESEND_API_KEY` | Yes (production) | Resend API key for contact form emails |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key files
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| File | Purpose |
+|---|---|
+| `src/lib/data/apps.ts` | All app data (title, description, pricing, store URLs) |
+| `src/lib/data/services.ts` | Services list shown on the homepage |
+| `src/lib/data/team.ts` | Team members |
+| `src/lib/whatsapp.ts` | WhatsApp number + pre-filled message — **update before going live** |
+| `src/app/api/contact/route.ts` | Contact form API (Resend) |
+| `src/app/sitemap.ts` | Auto-generated sitemap |
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See [DEPLOY.md](DEPLOY.md) for the full deployment checklist.

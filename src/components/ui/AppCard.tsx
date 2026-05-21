@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { AppData } from "@/lib/data/apps";
 import AppStoreBadge from "./AppStoreBadge";
+import PlayStoreBadge from "./PlayStoreBadge";
 
 export default function AppCard({ app }: { app: AppData }) {
   return (
@@ -11,7 +12,7 @@ export default function AppCard({ app }: { app: AppData }) {
           src={app.imageSrc}
           alt={app.imageAlt}
           fill
-          className="object-contain p-4"
+          className="object-cover"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
         />
       </div>
@@ -35,7 +36,10 @@ export default function AppCard({ app }: { app: AppData }) {
           ))}
         </div>
         <div className="mt-auto flex flex-col gap-2">
-          <AppStoreBadge url={app.appStoreUrl} size="sm" />
+          <div className="flex items-center gap-2">
+            <AppStoreBadge url={app.appStoreUrl} size="sm" />
+            {app.playStoreUrl && <PlayStoreBadge url={app.playStoreUrl} size="sm" />}
+          </div>
           <Link
             href={`/apps/${app.slug}`}
             className="text-sm font-medium text-[var(--color-brand)] hover:underline"

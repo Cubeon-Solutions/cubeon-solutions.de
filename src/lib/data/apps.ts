@@ -7,10 +7,13 @@ export interface AppData {
   imageAlt: string;
   badges: string[];
   appStoreUrl: string;
+  playStoreUrl?: string;
   privacyUrl: string;
   features: string[];
   metaTitle: string;
   metaDescription: string;
+  pricingInfo?: string;
+  schemaPrice?: string;
 }
 
 export const appsData: AppData[] = [
@@ -36,6 +39,7 @@ export const appsData: AppData[] = [
     metaTitle: "AwakeSync – Minimalistischer Wecker für iOS",
     metaDescription:
       "AwakeSync: Der datenschutzfreundliche Wecker für iPhone. Lokal, offline, ohne Tracking. Jetzt im App Store.",
+    pricingInfo: "Kostenlos · Pro €9,99",
   },
   {
     slug: "drivey",
@@ -59,6 +63,7 @@ export const appsData: AppData[] = [
     metaTitle: "Drivey – Fahrtenbuch App für iOS",
     metaDescription:
       "Drivey: Einfaches digitales Fahrtenbuch für iPhone. GPS-Tracking, lokale Datenspeicherung, kein Cloud-Zwang. Jetzt im App Store.",
+    pricingInfo: "Kostenlos · Pro ab €2,99/Monat oder einmalig €58,99",
   },
   {
     slug: "sbf-see",
@@ -83,6 +88,7 @@ export const appsData: AppData[] = [
     metaTitle: "SBF See Prüfungscoach – Führerschein App für iOS",
     metaDescription:
       "Bereiten Sie sich mit dem SBF See Prüfungscoach auf Ihren Sportbootführerschein vor. Offizieller Fragenkatalog, Übungsprüfungen, offline nutzbar.",
+    pricingInfo: "Kostenlos · Prüfungsmodus €6,99",
   },
   {
     slug: "sociogramly",
@@ -107,6 +113,8 @@ export const appsData: AppData[] = [
     metaTitle: "Sociogramly – Soziogramm App für iOS",
     metaDescription:
       "Sociogramly: Soziogramme erstellen und analysieren auf dem iPhone. Lokal, datenschutzfreundlich, für Lehrkräfte und Berater.",
+    pricingInfo: "€10,99",
+    schemaPrice: "10.99",
   },
   {
     slug: "homespot",
@@ -130,5 +138,31 @@ export const appsData: AppData[] = [
     metaTitle: "HomeSpot – HomeKit Steuerung für iOS",
     metaDescription:
       "HomeSpot: Die schnellste HomeKit App für iPhone. Blitzschnell, übersichtlich, lokal. Steuere dein Smart Home wie nie zuvor.",
+    pricingInfo: "Kostenlos · Pro €5,99",
+  },
+  {
+    slug: "nd-filter",
+    title: "ND Filter",
+    description:
+      "Berechne die optimale Belichtungszeit für Langzeitbelichtungen mit ND-Filtern.",
+    longDescription:
+      "ND Filter hilft Fotografen, die ideale Belichtungszeit beim Einsatz von Graufiltern (ND-Filtern) zu berechnen. Wähle einzelne oder mehrere Filter, gib deine Basisbelichtung ein und erhalte sofort die korrigierte Belichtungszeit – inklusive eingebautem Timer mit Vibration und Tonsignal.",
+    imageSrc: "/images/nd-filter.jpg",
+    imageAlt: "ND Filter App Screenshot",
+    badges: ["iOS", "Android", "Compose Multiplatform"],
+    appStoreUrl: "https://apps.apple.com/de/app/nd-filter/id6760582359",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=de.litedev.ndfilter&hl=de",
+    privacyUrl: "/datenschutz/nd-filter",
+    features: [
+      "Belichtungszeit für beliebige ND-Filter berechnen",
+      "Mehrere Filter gleichzeitig kombinieren",
+      "Eigene Filter hinzufügen und speichern",
+      "Eingebauter Timer mit Vibration und Tonsignal",
+      "Verfügbar für iOS und Android",
+    ],
+    metaTitle: "ND Filter – Belichtungsrechner für Fotografen",
+    metaDescription:
+      "ND Filter App: Berechne die optimale Belichtungszeit für Graufilter. Mit eingebautem Timer, für iOS und Android.",
+    pricingInfo: "Kostenlos",
   },
 ];

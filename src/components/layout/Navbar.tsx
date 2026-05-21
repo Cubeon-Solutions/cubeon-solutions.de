@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -14,6 +15,10 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const resolveHref = (anchor: string) => (isHome ? anchor : `/${anchor}`);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -43,14 +48,14 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={resolveHref(link.href)}
               className="text-sm text-[var(--color-body)] hover:text-[var(--color-brand)] transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="#kontakt"
+            href={resolveHref("#kontakt")}
             className="rounded-lg bg-[var(--color-brand)] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[var(--color-brand-dark)] transition-colors"
           >
             Jetzt anfragen
@@ -76,7 +81,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={resolveHref(link.href)}
               onClick={() => setMenuOpen(false)}
               className="text-sm text-[var(--color-body)] hover:text-[var(--color-brand)] transition-colors py-1"
             >
@@ -84,7 +89,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#kontakt"
+            href={resolveHref("#kontakt")}
             onClick={() => setMenuOpen(false)}
             className="rounded-lg bg-[var(--color-brand)] px-4 py-2.5 text-sm font-semibold text-white text-center hover:bg-[var(--color-brand-dark)] transition-colors"
           >

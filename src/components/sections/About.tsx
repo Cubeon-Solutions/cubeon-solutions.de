@@ -19,7 +19,7 @@ export default function About() {
         </div>
 
         <h3 className="text-xl font-semibold text-[var(--color-heading)] text-center mb-8">
-          Unsere Gründer
+          Team
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {teamData.map((member) => (

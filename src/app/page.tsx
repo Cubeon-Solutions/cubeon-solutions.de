@@ -7,6 +7,7 @@ import Services from "@/components/sections/Services";
 import Apps from "@/components/sections/Apps";
 import Contact from "@/components/sections/Contact";
 import JsonLd from "@/components/seo/JsonLd";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: "Cubeon Solutions — IT-Dienstleister aus Kassel",
@@ -37,6 +38,7 @@ const localBusinessSchema = {
     "IT-Dienstleister aus Kassel, spezialisiert auf Mobile Development (Android, iOS), Full-Stack-Entwicklung und KI-Lösungen.",
   areaServed: "DE",
   knowsLanguage: ["de", "en"],
+  image: "https://www.cubeon-solutions.de/images/cubeon_favicon_blue_1024.png",
 };
 
 export default function HomePage() {
@@ -52,6 +54,7 @@ export default function HomePage() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }
