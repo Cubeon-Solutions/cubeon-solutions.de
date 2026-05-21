@@ -10,11 +10,11 @@ export default function About() {
             Über uns
           </h2>
           <p className="text-[var(--color-body)] max-w-2xl mx-auto leading-relaxed">
-            Wir sind Cubeon Solutions aus Kassel. Unser Fokus liegt auf Mobile
-            Development (Android und iOS), Full-Stack und pragmatischen
-            KI-Lösungen. Wir stehen für eine enge Zusammenarbeit, schnelle
-            Prototypen und saubere Weiterentwicklung bis in den Betrieb —
-            zuverlässig und mit Ihnen zusammen.
+            Hinter Cubeon Solutions stehen drei Informatiker aus Kassel —
+            mit echter Leidenschaft für gut gemachte
+            Software. Was uns antreibt: Produkte, die im Alltag wirklich
+            funktionieren — durchdacht entwickelt, sauber gewartet und
+            gemeinsam mit unseren Kunden weitergedacht.
           </p>
         </div>
 

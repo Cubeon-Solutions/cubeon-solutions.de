@@ -7,13 +7,18 @@ import PlayStoreBadge from "./PlayStoreBadge";
 export default function AppCard({ app }: { app: AppData }) {
   return (
     <div className="flex flex-col rounded-2xl border border-[var(--color-border)] bg-white shadow-sm overflow-hidden transition-shadow hover:shadow-md">
-      <div className="relative w-full bg-[var(--color-bg-alt)]" style={{ paddingBottom: "180%" }}>
+      <div className="relative w-full overflow-hidden" style={{ paddingBottom: "217%" }}>
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 scale-125 blur-xl opacity-70"
+          style={{ backgroundImage: `url(${app.imageSrc})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        />
         <Image
           src={app.imageSrc}
           alt={app.imageAlt}
           fill
-          className="object-cover"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="object-contain z-10"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       </div>
       <div className="flex flex-col flex-1 p-5 gap-3">

@@ -22,10 +22,7 @@ export default function Hero() {
               <TypewriterText />
             </p>
             <p className="text-base text-[var(--color-body)] leading-relaxed mb-8 max-w-xl mx-auto md:mx-0">
-              Wir sind Cubeon Solutions aus Kassel — spezialisiert auf Mobile
-              Development (Android, iOS, Augmented Reality), Full-Stack- und
-              KI-Lösungen. Wir stehen für enge Zusammenarbeit, schnelle
-              Prototypen und zuverlässige Weiterentwicklung bis in den Betrieb.
+              Als Ihr IT-Dienstleister in Kassel entwickeln wir Software nicht nur bis zum Release, sondern von Anfang an wartbar, skalierbar und zukunftssicher. Direkt und ohne Agentur-Overhead.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">

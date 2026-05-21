@@ -5,6 +5,8 @@ export interface AppData {
   longDescription: string;
   imageSrc: string;
   imageAlt: string;
+  imageWidth: number;
+  imageHeight: number;
   badges: string[];
   appStoreUrl: string;
   playStoreUrl?: string;
@@ -26,6 +28,8 @@ export const appsData: AppData[] = [
       "AwakeSync ist ein schlichter, ablenkungsfreier Wecker für iOS. Alle Funktionen laufen vollständig lokal auf Ihrem Gerät – keine Konten, keine Datenerfassung, kein Netzwerkzugriff. Einfach einstellen und schlafen.",
     imageSrc: "/images/awakesync.jpg",
     imageAlt: "AwakeSync App Screenshot",
+    imageWidth: 1284,
+    imageHeight: 2778,
     badges: ["iOS", "Mobile"],
     appStoreUrl: "https://apps.apple.com/de/app/awakesync/id6466740367",
     privacyUrl: "/datenschutz/awakesync",
@@ -50,6 +54,8 @@ export const appsData: AppData[] = [
       "Drivey macht die Führung eines Fahrtenbuchs so einfach wie möglich. Starten Sie die Aufzeichnung, fahren Sie los – Drivey erfasst Route und Distanz lokal auf Ihrem Gerät. Perfekt für steuerliche Nachweise oder die Reisekostenabrechnung.",
     imageSrc: "/images/drivey.jpg",
     imageAlt: "Drivey Fahrtenbuch App Screenshot",
+    imageWidth: 1290,
+    imageHeight: 2796,
     badges: ["iOS", "Mobile"],
     appStoreUrl: "https://apps.apple.com/de/app/drivey/id1590360678",
     privacyUrl: "/datenschutz/drivey",
@@ -74,6 +80,8 @@ export const appsData: AppData[] = [
       "Der SBF See Prüfungscoach bereitet Sie gezielt auf die Prüfung zum Sportbootführerschein See vor. Mit dem offiziellen Fragenkatalog, Lernmodus und Übungsprüfungen lernen Sie effizient und prüfungssicher – komplett offline.",
     imageSrc: "/images/sbf-see.jpg",
     imageAlt: "SBF See Prüfungscoach App Screenshot",
+    imageWidth: 1320,
+    imageHeight: 2868,
     badges: ["iOS", "Education"],
     appStoreUrl:
       "https://apps.apple.com/de/app/sbf-see-pr%C3%BCfungscoach/id6745528841",
@@ -97,8 +105,10 @@ export const appsData: AppData[] = [
       "Eine App für soziale Analysen und Diagramme – lokal, sicher und datenschutzfreundlich.",
     longDescription:
       "Sociogramly ermöglicht die Erstellung und Analyse von Soziogrammen direkt auf Ihrem iPhone. Ideal für Lehrkräfte, Trainer und Berater, die Gruppenstrukturen visualisieren möchten – vollständig lokal und ohne Datenweitergabe.",
-    imageSrc: "/images/sociogramly.png",
+    imageSrc: "/images/sociogramly.jpg",
     imageAlt: "Sociogramly App Screenshot",
+    imageWidth: 626,
+    imageHeight: 834,
     badges: ["iOS", "Education"],
     appStoreUrl:
       "https://apps.apple.com/de/app/sociogramly/id6477749891",
@@ -119,11 +129,13 @@ export const appsData: AppData[] = [
   {
     slug: "homespot",
     title: "HomeSpot",
-    description: "Steuere dein HomeKit-Zuhause. Schneller als je zuvor.",
+    description: "Der schnellste Weg, Ihr HomeKit-Zuhause zu steuern.",
     longDescription:
       "HomeSpot ist die schnellste Art, Ihre HomeKit-Geräte zu steuern. Minimale Ladezeiten, direkter Zugriff auf alle Räume und Geräte – ohne Umwege. Für alle, die ihr Smart Home wirklich täglich nutzen.",
     imageSrc: "/images/homespot.png",
     imageAlt: "HomeSpot App Screenshot",
+    imageWidth: 300,
+    imageHeight: 649,
     badges: ["iOS", "Smart Home"],
     appStoreUrl:
       "https://apps.apple.com/de/app/homespot/id6757016819",
@@ -149,6 +161,8 @@ export const appsData: AppData[] = [
       "ND Filter hilft Fotografen, die ideale Belichtungszeit beim Einsatz von Graufiltern (ND-Filtern) zu berechnen. Wähle einzelne oder mehrere Filter, gib deine Basisbelichtung ein und erhalte sofort die korrigierte Belichtungszeit – inklusive eingebautem Timer mit Vibration und Tonsignal.",
     imageSrc: "/images/nd-filter.jpg",
     imageAlt: "ND Filter App Screenshot",
+    imageWidth: 460,
+    imageHeight: 996,
     badges: ["iOS", "Android", "Compose Multiplatform"],
     appStoreUrl: "https://apps.apple.com/de/app/nd-filter/id6760582359",
     playStoreUrl: "https://play.google.com/store/apps/details?id=de.litedev.ndfilter&hl=de",
