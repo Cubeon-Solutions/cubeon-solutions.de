@@ -10,7 +10,7 @@ export default function AppCard({ app }: { app: AppData }) {
       <div className="relative w-full overflow-hidden" style={{ paddingBottom: "217%" }}>
         <div
           aria-hidden="true"
-          className="absolute inset-0 scale-125 blur-xl opacity-70"
+          className="absolute -inset-8 blur-xl opacity-70"
           style={{ backgroundImage: `url(${app.imageSrc})`, backgroundSize: "cover", backgroundPosition: "center" }}
         />
         <Image
