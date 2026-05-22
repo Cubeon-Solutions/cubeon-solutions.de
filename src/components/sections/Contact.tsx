@@ -19,7 +19,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           {/* WhatsApp */}
           <div>
-            <OptionLabel number={1} label="WhatsApp" />
+            <p className="text-sm font-semibold text-[var(--color-heading)] mb-2 px-1">WhatsApp</p>
             <a
               href={whatsappUrl}
               target="_blank"
@@ -43,7 +43,7 @@ export default function Contact() {
 
           {/* Email */}
           <div>
-            <OptionLabel number={2} label="E-Mail" />
+            <p className="text-sm font-semibold text-[var(--color-heading)] mb-2 px-1">E-Mail</p>
             <a
               href="mailto:kontakt@cubeon-solutions.de"
               className="flex items-center gap-4 bg-white rounded-2xl border border-[var(--color-border)] shadow-sm p-5 transition-shadow hover:shadow-md group"
@@ -72,7 +72,7 @@ export default function Contact() {
 
         {/* Option 3 — Contact form */}
         <div>
-          <OptionLabel number={3} label="Kontaktformular" />
+          <p className="text-sm font-semibold text-[var(--color-heading)] mb-2 px-1">Kontaktformular</p>
           <div className="bg-white rounded-2xl shadow-sm border border-[var(--color-border)] p-8">
             <ContactForm />
           </div>
@@ -82,13 +82,3 @@ export default function Contact() {
   );
 }
 
-function OptionLabel({ number, label }: { number: number; label: string }) {
-  return (
-    <div className="flex items-center gap-2 mb-2 px-1">
-      <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[var(--color-brand)] text-white text-[11px] font-bold flex-shrink-0">
-        {number}
-      </span>
-      <span className="text-sm font-semibold text-[var(--color-heading)]">{label}</span>
-    </div>
-  );
-}
