@@ -66,7 +66,7 @@ export default function ImpressumPage() {
             Umsatzsteuer-ID
           </h2>
           <p className="text-[var(--color-body)]">
-            USt-IdNr.: [beantragt]
+            USt-IdNr.: DE457002743
           </p>
 
           <h2 className="text-lg font-semibold text-[var(--color-heading)] mt-6 mb-2">
