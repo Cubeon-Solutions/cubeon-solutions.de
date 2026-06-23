@@ -183,6 +183,7 @@ export default function DatenschutzPage() {
             <li><Link href="/datenschutz/sociogramly">Sociogramly</Link></li>
             <li><Link href="/datenschutz/homespot">HomeSpot</Link></li>
             <li><Link href="/datenschutz/nd-filter">ND Filter</Link></li>
+            <li><Link href="/datenschutz/lanscan">LanScan</Link></li>
           </ul>
 
           <hr />
