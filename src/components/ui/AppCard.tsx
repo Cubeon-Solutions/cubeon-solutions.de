@@ -5,6 +5,8 @@ import AppStoreBadge from "./AppStoreBadge";
 import PlayStoreBadge from "./PlayStoreBadge";
 
 export default function AppCard({ app }: { app: AppData }) {
+  const detailHref = app.productUrl ?? `/apps/${app.slug}`;
+
   return (
     <div className="flex flex-col rounded-2xl border border-[var(--color-border)] bg-white shadow-sm overflow-hidden transition-shadow hover:shadow-md">
       <div className="relative w-full overflow-hidden" style={{ paddingBottom: "217%" }}>
@@ -46,7 +48,7 @@ export default function AppCard({ app }: { app: AppData }) {
             {app.playStoreUrl && <PlayStoreBadge url={app.playStoreUrl} size="sm" />}
           </div>
           <Link
-            href={`/apps/${app.slug}`}
+            href={detailHref}
             className="text-sm font-medium text-[var(--color-brand)] hover:underline"
           >
             Mehr erfahren →

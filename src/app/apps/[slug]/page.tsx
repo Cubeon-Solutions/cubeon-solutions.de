@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { appsData } from "@/lib/data/apps";
@@ -36,6 +36,7 @@ export default async function AppPage({ params }: Props) {
   const { slug } = await params;
   const app = appsData.find((a) => a.slug === slug);
   if (!app) notFound();
+  if (app.productUrl) permanentRedirect(app.productUrl);
 
   const appSchema = {
     "@context": "https://schema.org",

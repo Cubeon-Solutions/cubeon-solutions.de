@@ -10,6 +10,7 @@ export interface AppData {
   badges: string[];
   appStoreUrl: string;
   playStoreUrl?: string;
+  productUrl?: string;
   privacyUrl: string;
   features: string[];
   metaTitle: string;
@@ -58,6 +59,7 @@ export const appsData: AppData[] = [
     imageHeight: 2796,
     badges: ["iOS", "Mobile"],
     appStoreUrl: "https://apps.apple.com/de/app/drivey/id1590360678",
+    productUrl: "https://drivey.cubeon-solutions.de",
     privacyUrl: "/datenschutz/drivey",
     features: [
       "Automatische GPS-Aufzeichnung Ihrer Fahrten",
