@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
+import Clients from "@/components/sections/Clients";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Apps from "@/components/sections/Apps";
@@ -48,6 +49,7 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
+        <Clients />
         <About />
         <Services />
         <Apps />

@@ -3,9 +3,13 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { enabledClients } from "@/lib/data/clients";
 import Image from "next/image";
 
 const navLinks = [
+  ...(enabledClients.length > 0
+    ? [{ label: "Zusammenarbeit", href: "#zusammenarbeit" }]
+    : []),
   { label: "Über uns", href: "#ueber-uns" },
   { label: "Leistungen", href: "#dienstleistungen" },
   { label: "Apps", href: "#apps" },

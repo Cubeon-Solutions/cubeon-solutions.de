@@ -40,3 +40,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env.local
+
+# Private working files and credentials
+/.private/
+/.aws/
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519

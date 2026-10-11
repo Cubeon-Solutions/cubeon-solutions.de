@@ -52,6 +52,10 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+      <div hidden aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-[var(--color-heading)] mb-1.5">
           Ihr Name
@@ -60,6 +64,7 @@ export default function ContactForm() {
           id="name"
           type="text"
           name="name"
+          maxLength={120}
           required
           className={inputClass}
           placeholder="Max Mustermann"
@@ -74,6 +79,7 @@ export default function ContactForm() {
           id="email"
           type="email"
           name="email"
+          maxLength={254}
           required
           className={inputClass}
           placeholder="max@beispiel.de"
@@ -87,6 +93,7 @@ export default function ContactForm() {
         <textarea
           id="message"
           name="message"
+          maxLength={5000}
           required
           rows={5}
           className={`${inputClass} resize-none`}

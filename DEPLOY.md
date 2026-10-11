@@ -68,3 +68,13 @@ Analytics are already installed in the code (`@vercel/analytics`). No extra step
 - [ ] Check [Google Rich Results Test](https://search.google.com/test/rich-results) on the homepage and one app page
 - [ ] Submit `https://cubeon-solutions.de/sitemap.xml` to [Google Search Console](https://search.google.com/search-console)
 - [ ] Update the `USt-IdNr` in `src/app/impressum/page.tsx` (currently marked as `[beantragt]`)
+
+## Security checks before deployment
+
+- Run `npm test`, `npm run lint`, `npm run build` and `npm audit --omit=dev`.
+- Keep `RESEND_API_KEY` in the hosting environment; never prefix it with `NEXT_PUBLIC_`.
+- Deploy the application through the framework build, not by serving the repository root.
+- `.private/` contains local unpublished reference material and must stay out of Git and deployment uploads. `enabled: false` hides a reference on the website but does not make its source code private.
+- The contact endpoint limits requests to 3 per email address and 30 total per 15 minutes **per running server instance**. Counters reset on restart and are not shared between instances. For distributed spam protection, configure a hosting WAF rule for POST `/api/contact` or a shared rate-limit store.
+- Production contact requests accept the two Cubeon main-domain origins. Add an explicitly trusted preview origin before testing the form on another domain.
+- On 2026-10-12, production dependencies passed npm audit. The development-only ESLint dependency chain still reported 5 high findings caused by `braces` (GHSA-vfj7-8cjw-p6xm), with no patched release available. Do not apply the suggested major ESLint/Next downgrade. Recheck when an upstream fix is available.
