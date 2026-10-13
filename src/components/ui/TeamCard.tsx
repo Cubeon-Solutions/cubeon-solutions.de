@@ -14,15 +14,12 @@ export default function TeamCard({ member }: { member: TeamMember }) {
         />
       </div>
       <div className="p-5">
-        <p className="font-semibold text-[var(--color-heading)]">
+        <h3 className="font-semibold text-[var(--color-heading)]">
           {member.name}
-        </p>
-        <p className="text-xs text-[var(--color-muted)] mb-1">{member.degree}</p>
-        <p className="text-sm font-medium text-[var(--color-brand)] mb-2">
+        </h3>
+        <p className="text-xs text-[var(--color-muted)] mb-1">{member.profession}</p>
+        <p className="text-sm font-medium text-[var(--color-brand)]">
           {member.role}
-        </p>
-        <p className="text-sm text-[var(--color-body)] leading-relaxed">
-          {member.description}
         </p>
       </div>
     </div>

@@ -11,47 +11,47 @@ const screenshots = {
   en: [
     {
       src: "/images/drivey/screen-1.webp",
-      alt: "Drivey app overview with trips and mileage",
+      alt: "Drivey app overview with trips and mileage"
     },
     {
       src: "/images/drivey/screen-2.webp",
-      alt: "Drivey app detail view for a recorded trip",
+      alt: "Drivey app detail view for a recorded trip"
     },
     {
       src: "/images/drivey/screen-3.webp",
-      alt: "Drivey app CarPlay and car assignment",
+      alt: "Drivey app CarPlay and car assignment"
     },
     {
       src: "/images/drivey/screen-4.webp",
-      alt: "Drivey app export and trip history",
+      alt: "Drivey app export and trip history"
     },
     {
       src: "/images/drivey/screen-5.webp",
-      alt: "Drivey app settings and automations",
-    },
+      alt: "Drivey app settings and automations"
+    }
   ],
   de: [
     {
       src: "/images/drivey/screen-1.webp",
-      alt: "Drivey App Übersicht mit Fahrten und Kilometerstand",
+      alt: "Drivey App Übersicht mit Fahrten und Kilometerstand"
     },
     {
       src: "/images/drivey/screen-2.webp",
-      alt: "Drivey App Detailansicht einer aufgezeichneten Fahrt",
+      alt: "Drivey App Detailansicht einer aufgezeichneten Fahrt"
     },
     {
       src: "/images/drivey/screen-3.webp",
-      alt: "Drivey App CarPlay und Autozuordnung",
+      alt: "Drivey App CarPlay und Autozuordnung"
     },
     {
       src: "/images/drivey/screen-4.webp",
-      alt: "Drivey App Export und Fahrtenhistorie",
+      alt: "Drivey App Export und Fahrtenhistorie"
     },
     {
       src: "/images/drivey/screen-5.webp",
-      alt: "Drivey App Einstellungen und Automationen",
-    },
-  ],
+      alt: "Drivey App Einstellungen und Automationen"
+    }
+  ]
 };
 
 const content = {
@@ -60,96 +60,94 @@ const content = {
     languageToggleLabel: "Select language",
     platform: "iPhone, iPad, Apple Watch, and CarPlay",
     heroTitle: "Mileage log app that records every drive automatically.",
-    heroText:
-      "Drivey is a mileage log app for iPhone that records drives in the background, tracks route, duration, and distance, and exports trip logs for expenses, reimbursement, and tax records.",
+    heroText: "Drivey is a mileage log app for iPhone that records drives in the background, tracks route, duration, and distance, and exports trip logs for expenses, reimbursement, and tax records.",
     appStoreCta: "Download on the App Store",
     pricing: "Free · In-App Purchases",
     highlights: [
-      { value: "4.5/5", label: "App Store rating" },
-      { value: "26", label: "Ratings" },
-      { value: "12.4 MB", label: "Compact install" },
-      { value: "4+", label: "Age rating" },
+      {
+        value: "4.5/5",
+        label: "App Store rating"
+      },
+      {
+        value: "26",
+        label: "Ratings"
+      },
+      {
+        value: "12.4 MB",
+        label: "Compact install"
+      },
+      {
+        value: "4+",
+        label: "Age rating"
+      }
     ],
     featuresEyebrow: "Features",
-    featuresTitle: "Everything a mileage tracker should handle every day.",
-    featuresIntro:
-      "Drivey is built for freelancers, consultants, commuters, and anyone who needs reliable drive logs without operating overloaded admin software: drive, review, export.",
+    featuresTitle: "Record routes, manage vehicles, and export trip logs.",
+    featuresIntro: "Drivey records trips and keeps their route, duration, and distance in one place. You can assign trips to vehicles and export them as CSV files.",
     features: [
       {
         title: "Automatic drive tracking",
-        description:
-          "Drivey detects trips in the background, records mileage, duration, and route, and keeps manual mileage tracking to a minimum.",
+        description: "Drivey detects trips in the background, records mileage, duration, and route, and keeps manual mileage tracking to a minimum."
       },
       {
         title: "Siri, Shortcuts, and CarPlay",
-        description:
-          "Start, stop, and automate trip logging through iOS Shortcuts, voice commands, routines, and CarPlay integration.",
+        description: "Start, stop, and automate trip logging through iOS Shortcuts, voice commands, routines, and CarPlay integration."
       },
       {
         title: "CSV mileage log exports",
-        description:
-          "Export trip logs as CSV for accounting, expense reports, reimbursements, and tax documentation.",
+        description: "Export trip logs as CSV for accounting, expense reports, reimbursements, and tax documentation."
       },
       {
         title: "Multiple cars",
-        description:
-          "Assign trips to your vehicles and keep separate odometers and trip lists in view.",
+        description: "Assign trips to your vehicles and keep separate odometers and trip lists in view."
       },
       {
         title: "Apple Watch support",
-        description:
-          "Control recording right from your wrist when your iPhone stays in your pocket.",
+        description: "Control recording right from your wrist when your iPhone stays in your pocket."
       },
       {
         title: "Privacy-minded",
-        description:
-          "Drivey does not collect your data for advertising, tracking, or resale. Location data is used only to record your trips.",
-      },
+        description: "Drivey does not collect your data for advertising, tracking, or resale. Location data is used only to record your trips."
+      }
     ],
     screenshotsEyebrow: "App Preview",
-    screenshotsTitle: "Clear history, quick control, direct exports.",
+    screenshotsTitle: "Trip history, vehicle assignment, and CSV export.",
     workflowEyebrow: "Workflow",
     workflowTitle: "From driving off to a CSV mileage log in three steps.",
-    workflowText:
-      "Drivey combines automatic recording with the iOS tools you already use: Shortcuts, Siri, Apple Watch, and CarPlay.",
+    workflowText: "Drivey combines automatic recording with the iOS tools you already use: Shortcuts, Siri, Apple Watch, and CarPlay.",
     steps: [
       "Start a trip automatically or with a Shortcut",
       "Let Drivey record route, mileage, and duration",
-      "Review trip logs, add tags, assign a car, and export",
+      "Review trip logs, add tags, assign a car, and export"
     ],
     faqEyebrow: "Mileage Log FAQ",
     faqTitle: "Common questions about Drivey trip logging.",
     faqs: [
       {
         question: "Can Drivey log drives automatically?",
-        answer:
-          "Yes. Drivey can record drives in the background and keep route, mileage, duration, and trip history available for review.",
+        answer: "Yes. Drivey can record drives in the background and keep route, mileage, duration, and trip history available for review."
       },
       {
         question: "Can I export my mileage log?",
-        answer:
-          "Yes. Drivey exports trip logs as CSV files for accounting, expense reports, reimbursements, and tax documentation.",
+        answer: "Yes. Drivey exports trip logs as CSV files for accounting, expense reports, reimbursements, and tax documentation."
       },
       {
         question: "Does Drivey collect my data for advertising?",
-        answer:
-          "No. Drivey does not collect your data for advertising, tracking, or resale. Location data is used only to record your trips.",
-      },
+        answer: "No. Drivey does not collect your data for advertising, tracking, or resale. Location data is used only to record your trips."
+      }
     ],
-    finalTitle: "Ready for a mileage log that simply rides along?",
-    finalText:
-      "Drivey is available for free on the App Store. Pro upgrades are available as monthly or lifetime options.",
+    finalTitle: "Download Drivey for iPhone.",
+    finalText: "Drivey is available for free on the App Store. Pro upgrades are available as monthly or lifetime options.",
     privacyCta: "View privacy policy",
     cubeonLabel: "Cubeon Solutions homepage",
-    schemaDescription:
-      "Drivey is a mileage log app for iPhone that records drives automatically, tracks mileage and routes, and exports CSV trip logs.",
+    schemaDescription: "Drivey is a mileage log app for iPhone that records drives automatically, tracks mileage and routes, and exports CSV trip logs.",
     schemaKeywords: [
       "mileage log app",
       "trip logging app",
       "drive tracker",
       "mileage tracker",
       "automatic drive tracking",
-      "CSV mileage log export",
+      "CSV mileage log export"
     ],
     schemaFeatureList: [
       "Automatic drive tracking",
@@ -157,104 +155,102 @@ const content = {
       "CSV trip log export",
       "CarPlay integration",
       "Apple Watch support",
-      "Siri Shortcuts automation",
-    ],
+      "Siri Shortcuts automation"
+    ]
   },
   de: {
     privacy: "Datenschutz",
     languageToggleLabel: "Sprache auswählen",
     platform: "iPhone, iPad, Apple Watch und CarPlay",
     heroTitle: "Fahrtenbuch App, die Fahrten automatisch aufzeichnet.",
-    heroText:
-      "Drivey ist eine Fahrtenbuch App für iPhone, die Fahrten im Hintergrund protokolliert, Route, Dauer und Kilometer erfasst und exportierbare Fahrtenbücher für Abrechnung, Erstattung und Steuerunterlagen liefert.",
+    heroText: "Drivey ist eine Fahrtenbuch App für iPhone, die Fahrten im Hintergrund protokolliert, Route, Dauer und Kilometer erfasst und exportierbare Fahrtenbücher für Abrechnung, Erstattung und Steuerunterlagen liefert.",
     appStoreCta: "Im App Store laden",
     pricing: "Kostenlos · In-App-Käufe",
     highlights: [
-      { value: "4,5/5", label: "App Store Bewertung" },
-      { value: "26", label: "Bewertungen" },
-      { value: "12,4 MB", label: "Kompakt installiert" },
-      { value: "4+", label: "Altersfreigabe" },
+      {
+        value: "4,5/5",
+        label: "App Store Bewertung"
+      },
+      {
+        value: "26",
+        label: "Bewertungen"
+      },
+      {
+        value: "12,4 MB",
+        label: "Kompakt installiert"
+      },
+      {
+        value: "4+",
+        label: "Altersfreigabe"
+      }
     ],
     featuresEyebrow: "Funktionen",
-    featuresTitle: "Alles, was ein digitaler Kilometer Tracker täglich können muss.",
-    featuresIntro:
-      "Drivey ist für Selbstständige, Berater, Pendler und alle gebaut, die ein verlässliches Fahrtenprotokoll brauchen, aber keine überladene Verwaltungssoftware bedienen wollen: fahren, prüfen, exportieren.",
+    featuresTitle: "Fahrten erfassen, Fahrzeuge zuordnen und Daten exportieren.",
+    featuresIntro: "Drivey erfasst Route, Dauer und Entfernung Ihrer Fahrten. Sie können Fahrten einem Fahrzeug zuordnen und die Daten als CSV-Datei exportieren.",
     features: [
       {
         title: "Automatische Fahrtenaufzeichnung",
-        description:
-          "Drivey erkennt Fahrten im Hintergrund, protokolliert Kilometer, Dauer und Route und reduziert manuelle Fahrtenbuchpflege auf ein Minimum.",
+        description: "Drivey erkennt Fahrten im Hintergrund, protokolliert Kilometer, Dauer und Route und reduziert manuelle Fahrtenbuchpflege auf ein Minimum."
       },
       {
         title: "Siri, Kurzbefehle und CarPlay",
-        description:
-          "Starten, stoppen und automatisieren Sie Fahrten über iOS Kurzbefehle, Sprachbefehle, Routinen und die CarPlay Integration.",
+        description: "Starten, stoppen und automatisieren Sie Fahrten über iOS Kurzbefehle, Sprachbefehle, Routinen und die CarPlay Integration."
       },
       {
         title: "CSV Fahrtenbuch Export",
-        description:
-          "Exportieren Sie Fahrtenbücher als CSV für Buchhaltung, Reisekostenabrechnung, Rückerstattung und steuerliche Dokumentation.",
+        description: "Exportieren Sie Fahrtenbücher als CSV für Buchhaltung, Reisekostenabrechnung, Rückerstattung und steuerliche Dokumentation."
       },
       {
         title: "Mehrere Autos",
-        description:
-          "Ordnen Sie Fahrten Ihren Fahrzeugen zu und behalten Sie unabhängige Kilometerstände und Fahrtlisten im Blick.",
+        description: "Ordnen Sie Fahrten Ihren Fahrzeugen zu und behalten Sie unabhängige Kilometerstände und Fahrtlisten im Blick."
       },
       {
         title: "Apple Watch Support",
-        description:
-          "Steuern Sie die Aufzeichnung direkt am Handgelenk, wenn das iPhone in der Tasche bleibt.",
+        description: "Steuern Sie die Aufzeichnung direkt am Handgelenk, wenn das iPhone in der Tasche bleibt."
       },
       {
         title: "Datenschutzfreundlich",
-        description:
-          "Drivey sammelt keine Daten für Werbung, Tracking oder Weiterverkauf. Standortdaten werden nur zur Aufzeichnung Ihrer Fahrten verwendet.",
-      },
+        description: "Drivey sammelt keine Daten für Werbung, Tracking oder Weiterverkauf. Standortdaten werden nur zur Aufzeichnung Ihrer Fahrten verwendet."
+      }
     ],
     screenshotsEyebrow: "App Einblicke",
-    screenshotsTitle: "Klarer Verlauf, schnelle Kontrolle, direkte Exporte.",
+    screenshotsTitle: "Fahrtenverlauf, Fahrzeugzuordnung und CSV-Export.",
     workflowEyebrow: "Workflow",
     workflowTitle: "Vom Losfahren bis zum CSV Fahrtenbuch in drei Schritten.",
-    workflowText:
-      "Drivey verbindet automatische Erfassung mit den iOS Werkzeugen, die Sie ohnehin nutzen: Kurzbefehle, Siri, Apple Watch und CarPlay.",
+    workflowText: "Drivey verbindet automatische Erfassung mit den iOS Werkzeugen, die Sie ohnehin nutzen: Kurzbefehle, Siri, Apple Watch und CarPlay.",
     steps: [
       "Fahrt automatisch oder per Kurzbefehl starten",
       "Route, Kilometer und Dauer erfassen lassen",
-      "Fahrtenbuch prüfen, taggen, einem Auto zuordnen und exportieren",
+      "Fahrtenbuch prüfen, taggen, einem Auto zuordnen und exportieren"
     ],
     faqEyebrow: "Fahrtenbuch FAQ",
     faqTitle: "Häufige Fragen zur Fahrtenaufzeichnung mit Drivey.",
     faqs: [
       {
         question: "Kann Drivey Fahrten automatisch aufzeichnen?",
-        answer:
-          "Ja. Drivey kann Fahrten im Hintergrund protokollieren und Route, Kilometer, Dauer und Fahrtenhistorie zur Prüfung bereitstellen.",
+        answer: "Ja. Drivey kann Fahrten im Hintergrund protokollieren und Route, Kilometer, Dauer und Fahrtenhistorie zur Prüfung bereitstellen."
       },
       {
         question: "Kann ich mein Fahrtenbuch exportieren?",
-        answer:
-          "Ja. Drivey exportiert Fahrtenbücher als CSV-Dateien für Buchhaltung, Reisekostenabrechnung, Erstattung und Steuerunterlagen.",
+        answer: "Ja. Drivey exportiert Fahrtenbücher als CSV-Dateien für Buchhaltung, Reisekostenabrechnung, Erstattung und Steuerunterlagen."
       },
       {
         question: "Sammelt Drivey Daten für Werbung?",
-        answer:
-          "Nein. Drivey sammelt keine Daten für Werbung, Tracking oder Weiterverkauf. Standortdaten werden nur zur Aufzeichnung Ihrer Fahrten verwendet.",
-      },
+        answer: "Nein. Drivey sammelt keine Daten für Werbung, Tracking oder Weiterverkauf. Standortdaten werden nur zur Aufzeichnung Ihrer Fahrten verwendet."
+      }
     ],
-    finalTitle: "Bereit für ein Fahrtenbuch, das einfach mitfährt?",
-    finalText:
-      "Drivey ist kostenlos im App Store verfügbar. Pro Upgrades sind als monatlicher Kauf oder Lifetime Option erhältlich.",
+    finalTitle: "Drivey für iPhone herunterladen.",
+    finalText: "Drivey ist kostenlos im App Store verfügbar. Pro Upgrades sind als monatlicher Kauf oder Lifetime Option erhältlich.",
     privacyCta: "Datenschutz ansehen",
     cubeonLabel: "Cubeon Solutions Startseite",
-    schemaDescription:
-      "Drivey ist eine Fahrtenbuch App für iPhone, die Fahrten automatisch aufzeichnet, Kilometer und Routen erfasst und CSV-Fahrtenbücher exportiert.",
+    schemaDescription: "Drivey ist eine Fahrtenbuch App für iPhone, die Fahrten automatisch aufzeichnet, Kilometer und Routen erfasst und CSV-Fahrtenbücher exportiert.",
     schemaKeywords: [
       "Fahrtenbuch App",
       "digitales Fahrtenbuch",
       "Fahrten automatisch aufzeichnen",
       "Kilometer Tracker",
       "Routenerfassung App",
-      "CSV Fahrtenbuch Export",
+      "CSV Fahrtenbuch Export"
     ],
     schemaFeatureList: [
       "Automatische Fahrtenaufzeichnung",
@@ -262,9 +258,9 @@ const content = {
       "CSV Fahrtenbuch Export",
       "CarPlay Integration",
       "Apple Watch Unterstützung",
-      "Kurzbefehle Automatisierung",
-    ],
-  },
+      "Kurzbefehle Automatisierung"
+    ]
+  }
 };
 
 function CheckIcon() {
@@ -334,9 +330,19 @@ function AppStoreButton({ label }: { label: string }) {
 }
 
 const languageOptions = [
-  { locale: "en", code: "EN", label: "English", href: "/drivey" },
-  { locale: "de", code: "DE", label: "Deutsch", href: "/drivey/de" },
-] as const;
+  {
+    locale: "en",
+    code: "EN",
+    label: "English",
+    href: "/drivey"
+  },
+  {
+    locale: "de",
+    code: "DE",
+    label: "Deutsch",
+    href: "/drivey/de"
+  }
+];
 
 function LanguageMenu({
   locale,
@@ -362,11 +368,10 @@ function LanguageMenu({
       <div className="absolute right-0 z-20 mt-2 w-44 overflow-hidden rounded-lg border border-[#d8e7e5] bg-white p-1 shadow-xl shadow-[#162033]/10">
         {languageOptions.map((option) => {
           const isActive = option.locale === locale;
-          const className = `flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors ${
-            isActive
+          const className = `flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors ${isActive
               ? "bg-[#eef7f6] font-bold text-[#162033]"
               : "font-medium text-[#50627a] hover:bg-[#f7f9fb] hover:text-[#1e50d4]"
-          }`;
+            }`;
 
           return (
             <Link
@@ -452,7 +457,7 @@ export default function DriveyLanding({ locale }: { locale: DriveyLocale }) {
   return (
     <>
       <JsonLd data={createDriveySchema(locale)} />
-      <main className="min-h-screen bg-[#f7f9fb] text-[#162033]">
+      <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#f7f9fb] text-[#162033]">
         <section className="overflow-hidden bg-[#eef7f6]">
           <div className="mx-auto grid min-h-[92vh] max-w-6xl grid-cols-1 items-center gap-10 px-6 pb-16 pt-6 md:grid-cols-[1fr_0.86fr] md:pb-20">
             <header className="flex items-center justify-between gap-4 md:col-span-2">
@@ -467,8 +472,7 @@ export default function DriveyLanding({ locale }: { locale: DriveyLocale }) {
                   width={28}
                   height={28}
                 />
-                Cubeon Solutions
-              </Link>
+                Cubeon Solutions</Link>
               <div className="flex items-center gap-4">
                 <Link
                   href="/datenschutz/drivey"
@@ -495,8 +499,7 @@ export default function DriveyLanding({ locale }: { locale: DriveyLocale }) {
                 />
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#25716d]">
-                    Drivey
-                  </p>
+                    Drivey</p>
                   <p className="text-sm text-[#50627a]">{t.platform}</p>
                 </div>
               </div>

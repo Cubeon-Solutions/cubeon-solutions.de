@@ -39,13 +39,11 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-xl bg-green-50 border border-green-200 p-6 text-center">
+      <div role="status" className="rounded-xl bg-green-50 border border-green-200 p-6 text-center">
         <p className="text-green-800 font-medium text-lg mb-1">
-          Vielen Dank für Ihre Anfrage!
-        </p>
+          Vielen Dank für Ihre Anfrage!</p>
         <p className="text-green-700 text-sm">
-          Wir melden uns so schnell wie möglich bei Ihnen.
-        </p>
+          Wir melden uns per E-Mail, um Ihre Anfrage und die nächsten Schritte zu besprechen.</p>
       </div>
     );
   }
@@ -58,51 +56,60 @@ export default function ContactForm() {
       </div>
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-[var(--color-heading)] mb-1.5">
-          Ihr Name
-        </label>
+          Ihr Name</label>
         <input
           id="name"
           type="text"
           name="name"
+          autoComplete="name"
           maxLength={120}
           required
           className={inputClass}
-          placeholder="Max Mustermann"
+          placeholder="Vor- und Nachname…"
         />
       </div>
 
       <div>
         <label htmlFor="email" className="block text-sm font-medium text-[var(--color-heading)] mb-1.5">
-          Ihre E-Mail
-        </label>
+          Ihre E-Mail</label>
         <input
           id="email"
           type="email"
           name="email"
+          autoComplete="email"
+          spellCheck={false}
           maxLength={254}
           required
           className={inputClass}
-          placeholder="max@beispiel.de"
+          placeholder="name@unternehmen.de"
         />
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-[var(--color-heading)] mb-1.5">
-          Ihre Nachricht
+        <label htmlFor="company" className="block text-sm font-medium text-[var(--color-heading)] mb-1.5">
+          Ihr Unternehmen <span className="font-normal text-[var(--color-muted)]">(optional)</span>
         </label>
+        <input id="company" type="text" name="company" autoComplete="organization" maxLength={160} className={inputClass} placeholder="Name Ihres Unternehmens…" />
+      </div>
+
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium text-[var(--color-heading)] mb-1.5">
+          Ihre Nachricht</label>
         <textarea
           id="message"
           name="message"
+          aria-describedby="message-hint"
           maxLength={5000}
           required
           rows={5}
-          className={`${inputClass} resize-none`}
-          placeholder="Beschreiben Sie kurz Ihr Projekt oder Ihre Anfrage…"
+          className={`${inputClass} resize-y`}
+          placeholder="Beschreiben Sie kurz Ihre Idee oder Ihr Softwareproblem…"
         />
+        <p id="message-hint" className="mt-2 text-sm leading-6 text-[var(--color-muted)]">Was möchten Sie verbessern oder entwickeln? Welche Programme nutzen Sie bisher? Welche Frage möchten Sie mit uns klären?</p>
       </div>
 
       {status === "error" && (
-        <p className="text-sm text-red-600">{errorMsg}</p>
+        <p role="alert" className="text-sm text-red-600">{errorMsg}</p>
       )}
 
       <button
@@ -116,10 +123,8 @@ export default function ContactForm() {
       <p className="text-xs text-[var(--color-muted)] leading-relaxed">
         Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer{" "}
         <a href="/datenschutz" className="underline hover:text-[var(--color-brand)]">
-          Datenschutzerklärung
-        </a>{" "}
-        zu.
-      </p>
+          Datenschutzerklärung</a>{" "}
+        zu.</p>
     </form>
   );
 }

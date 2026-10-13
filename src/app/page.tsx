@@ -1,57 +1,37 @@
-import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
-import Clients from "@/components/sections/Clients";
-import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
+import ProjectExtensions from "@/components/sections/ProjectExtensions";
+import Clients from "@/components/sections/Clients";
+import WhyCubeon from "@/components/sections/WhyCubeon";
+import Approach from "@/components/sections/Approach";
+import About from "@/components/sections/About";
 import Apps from "@/components/sections/Apps";
 import Contact from "@/components/sections/Contact";
 import JsonLd from "@/components/seo/JsonLd";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import { businessSchema, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Cubeon Solutions — IT-Dienstleister aus Kassel",
-  description:
-    "Cubeon Solutions aus Kassel: Mobile App Entwicklung (Android, iOS), Full-Stack-Entwicklung und KI-Lösungen für Unternehmen. Jetzt anfragen.",
-  openGraph: {
-    title: "Cubeon Solutions — IT-Dienstleister aus Kassel",
-    description:
-      "Mobile App Entwicklung, Full-Stack und KI-Lösungen aus Kassel. Enge Zusammenarbeit, schnelle Prototypen.",
-    images: ["/images/cubeon_favicon_blue_1024.png"],
-  },
-};
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "Cubeon Solutions UG (haftungsbeschränkt)",
-  url: "https://www.cubeon-solutions.de",
-  email: "kontakt@cubeon-solutions.de",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Hupfeldstr. 6",
-    addressLocality: "Kassel",
-    postalCode: "34121",
-    addressCountry: "DE",
-  },
-  description:
-    "IT-Dienstleister aus Kassel, spezialisiert auf Mobile Development (Android, iOS), Full-Stack-Entwicklung und KI-Lösungen.",
-  areaServed: "DE",
-  knowsLanguage: ["de", "en"],
-  image: "https://www.cubeon-solutions.de/images/cubeon_favicon_blue_1024.png",
-};
+export const metadata = pageMetadata(
+  "Software, Apps & Beratung aus Kassel",
+  "Individuelle Software, Apps für Android, iOS und Desktop sowie Beratung für KMU deutschlandweit. Aus Kassel, direkt mit den Entwicklern.",
+  "/",
+);
 
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={businessSchema} />
       <Navbar />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <Hero />
-        <Clients />
-        <About />
         <Services />
+        <ProjectExtensions />
+        <Clients />
+        <WhyCubeon />
+        <Approach />
+        <About />
         <Apps />
         <Contact />
       </main>

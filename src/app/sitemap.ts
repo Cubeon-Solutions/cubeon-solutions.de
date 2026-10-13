@@ -1,53 +1,16 @@
 import type { MetadataRoute } from "next";
 import { appsData } from "@/lib/data/apps";
-
-const BASE_URL = "https://www.cubeon-solutions.de";
-const DRIVEY_URL = "https://drivey.cubeon-solutions.de";
+import { services } from "@/lib/data/services";
+import { BASE_URL, CONTENT_UPDATED } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const LAUNCH_DATE = new Date("2026-05-21");
-  const DRIVEY_SEO_UPDATE_DATE = new Date("2026-06-29");
-
-  const appPages = appsData
-    .filter((app) => !app.productUrl)
-    .map((app) => ({
-      url: `${BASE_URL}/apps/${app.slug}`,
-      lastModified: LAUNCH_DATE,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    }));
-
+  const updated = new Date(CONTENT_UPDATED);
   return [
-    {
-      url: BASE_URL,
-      lastModified: LAUNCH_DATE,
-      changeFrequency: "monthly" as const,
-      priority: 1.0,
-    },
-    ...appPages,
-    {
-      url: DRIVEY_URL,
-      lastModified: DRIVEY_SEO_UPDATE_DATE,
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${DRIVEY_URL}/de`,
-      lastModified: DRIVEY_SEO_UPDATE_DATE,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/datenschutz`,
-      lastModified: LAUNCH_DATE,
-      changeFrequency: "yearly" as const,
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/impressum`,
-      lastModified: LAUNCH_DATE,
-      changeFrequency: "yearly" as const,
-      priority: 0.3,
-    },
+    { url: BASE_URL + "/", lastModified: updated },
+    ...services.map((service) => ({ url: BASE_URL + service.href, lastModified: updated })),
+    { url: BASE_URL + "/apps", lastModified: updated },
+    ...appsData.filter((app) => !app.productUrl).map((app) => ({ url: BASE_URL + "/apps/" + app.slug, lastModified: updated })),
+    { url: "https://drivey.cubeon-solutions.de", lastModified: updated },
+    { url: "https://drivey.cubeon-solutions.de/de", lastModified: updated },
   ];
 }

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "drive tracker",
     "mileage tracker iPhone",
     "automatic route tracking",
-    "CSV mileage export",
+    "CSV mileage export"
   ],
   alternates: {
     canonical: "https://drivey.cubeon-solutions.de",

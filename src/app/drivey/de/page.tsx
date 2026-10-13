@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Fahrten automatisch aufzeichnen",
     "Kilometer Tracker iPhone",
     "Routenerfassung App",
-    "CSV Fahrtenbuch Export",
+    "CSV Fahrtenbuch Export"
   ],
   alternates: {
     canonical: "https://drivey.cubeon-solutions.de/de",

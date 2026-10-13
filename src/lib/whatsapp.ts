@@ -1,6 +1,6 @@
-// Replace with your number in international format (no + or spaces), e.g. "4915112345678"
+// Nummer und Nachricht für alle WhatsApp-Verweise der Website.
 export const WHATSAPP_NUMBER = "4915229535871";
 export const WHATSAPP_MESSAGE =
-  "Hallo, ich interessiere mich für eine Zusammenarbeit mit Cubeon Solutions.";
+  "Hallo, ich möchte mit Cubeon Solutions eine Projektidee oder eine Frage zu meiner Software besprechen.";
 
 export const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;

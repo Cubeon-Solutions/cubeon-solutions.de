@@ -3,6 +3,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { appsData } from "@/lib/data/apps";
+import { BASE_URL } from "@/lib/seo";
 import AppStoreBadge from "@/components/ui/AppStoreBadge";
 import PlayStoreBadge from "@/components/ui/PlayStoreBadge";
 import Navbar from "@/components/layout/Navbar";
@@ -24,11 +25,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: app.metaTitle,
     description: app.metaDescription,
+    alternates: { canonical: app.productUrl ?? `${BASE_URL}/apps/${app.slug}` },
     openGraph: {
       title: app.metaTitle,
       description: app.metaDescription,
       images: [app.imageSrc],
+      url: app.productUrl ?? `${BASE_URL}/apps/${app.slug}`,
     },
+    twitter: { card: "summary_large_image", title: app.metaTitle, description: app.metaDescription, images: [app.imageSrc] },
   };
 }
 
@@ -43,7 +47,7 @@ export default async function AppPage({ params }: Props) {
     "@type": "SoftwareApplication",
     name: app.title,
     description: app.longDescription,
-    operatingSystem: "iOS",
+    operatingSystem: app.playStoreUrl ? "iOS, Android" : "iOS",
     applicationCategory: "MobileApplication",
     offers: {
       "@type": "Offer",
@@ -58,7 +62,7 @@ export default async function AppPage({ params }: Props) {
     <>
       <JsonLd data={appSchema} />
       <Navbar />
-      <main className="pt-20">
+      <main id="main-content" tabIndex={-1} className="pt-20">
         {/* Hero */}
         <section className="bg-gradient-to-br from-slate-50 to-blue-50/40 py-16">
           <div className="mx-auto max-w-5xl px-6">
@@ -70,7 +74,7 @@ export default async function AppPage({ params }: Props) {
                   fill
                   className="object-contain drop-shadow-xl"
                   sizes="192px"
-                  priority
+                  preload
                 />
               </div>
               <div className="flex-1 text-center md:text-left">
@@ -108,8 +112,7 @@ export default async function AppPage({ params }: Props) {
         <section className="py-16 bg-white">
           <div className="mx-auto max-w-3xl px-6">
             <h2 className="text-2xl font-bold text-[var(--color-heading)] mb-6">
-              Funktionen
-            </h2>
+              Funktionen</h2>
             <ul className="space-y-3">
               {app.features.map((feature) => (
                 <li key={feature} className="flex items-start gap-3">
@@ -129,8 +132,7 @@ export default async function AppPage({ params }: Props) {
         <section className="py-16 bg-[var(--color-bg-alt)]">
           <div className="mx-auto max-w-3xl px-6 flex flex-col items-center gap-6 text-center">
             <h2 className="text-2xl font-bold text-[var(--color-heading)]">
-              Jetzt herunterladen
-            </h2>
+              Jetzt herunterladen</h2>
             <div className="flex flex-wrap justify-center gap-3">
               <AppStoreBadge url={app.appStoreUrl} size="md" />
               {app.playStoreUrl && <PlayStoreBadge url={app.playStoreUrl} size="md" />}
@@ -145,15 +147,13 @@ export default async function AppPage({ params }: Props) {
                 href={app.privacyUrl}
                 className="hover:text-[var(--color-brand)] transition-colors"
               >
-                Datenschutz
-              </Link>
+                Datenschutz</Link>
               <span>·</span>
               <Link
-                href="/#apps"
+                href="/apps"
                 className="hover:text-[var(--color-brand)] transition-colors"
               >
-                ← Alle Apps
-              </Link>
+                ← Alle Apps</Link>
             </div>
           </div>
         </section>

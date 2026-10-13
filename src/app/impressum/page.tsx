@@ -13,72 +13,54 @@ export default function ImpressumPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-20 pb-16">
+      <main id="main-content" tabIndex={-1} className="pt-20 pb-16">
         <div className="mx-auto max-w-3xl px-6 py-12">
           <Link href="/" className="text-sm text-[var(--color-brand)] hover:underline mb-8 inline-block">
-            ← Zurück zur Startseite
-          </Link>
+            ← Zurück zur Startseite</Link>
           <h1 className="text-3xl font-bold text-[var(--color-heading)] mb-8">
-            Impressum
-          </h1>
+            Impressum</h1>
 
           <h2 className="text-lg font-semibold text-[var(--color-heading)] mt-6 mb-2">
-            Angaben gemäß § 5 TMG
-          </h2>
+            Angaben gemäß § 5 DDG</h2>
           <p className="text-[var(--color-body)] leading-relaxed">
             <strong>Cubeon Solutions UG (haftungsbeschränkt)</strong>
             <br />
-            Hupfeldstr. 6
-            <br />
-            34121 Kassel
-          </p>
+            Hupfeldstr. 6<br />
+            34121 Kassel</p>
 
           <h2 className="text-lg font-semibold text-[var(--color-heading)] mt-6 mb-2">
-            Vertreten durch
-          </h2>
+            Vertreten durch</h2>
           <p className="text-[var(--color-body)]">Ludwig Chen Li</p>
 
           <h2 className="text-lg font-semibold text-[var(--color-heading)] mt-6 mb-2">
-            Kontakt
-          </h2>
+            Kontakt</h2>
           <p className="text-[var(--color-body)]">
             E-Mail:{" "}
             <a
-              href="mailto:kontakt@cubeon-solutions.de"
+              href={"mailto:" + "kontakt@cubeon-solutions.de"}
               className="text-[var(--color-brand)] hover:underline"
             >
-              kontakt@cubeon-solutions.de
-            </a>
+              kontakt@cubeon-solutions.de</a>
           </p>
 
           <h2 className="text-lg font-semibold text-[var(--color-heading)] mt-6 mb-2">
-            Registereintrag
-          </h2>
+            Registereintrag</h2>
           <p className="text-[var(--color-body)] leading-relaxed">
-            Eintragung im Handelsregister.
-            <br />
-            Registergericht: Amtsgericht Kassel
-            <br />
-            Registernummer: HRB 20365
-          </p>
+            Eintragung im Handelsregister.<br />
+            Registergericht: Amtsgericht Kassel<br />
+            Registernummer: HRB 20365</p>
 
           <h2 className="text-lg font-semibold text-[var(--color-heading)] mt-6 mb-2">
-            Umsatzsteuer-ID
-          </h2>
+            Umsatzsteuer-ID</h2>
           <p className="text-[var(--color-body)]">
-            USt-IdNr.: DE457002743
-          </p>
+            USt-IdNr.: DE457002743</p>
 
           <h2 className="text-lg font-semibold text-[var(--color-heading)] mt-6 mb-2">
-            Verantwortlich i.S.d. § 18 Abs. 2 MStV
-          </h2>
+            Verantwortlich i.S.d. § 18 Abs. 2 MStV</h2>
           <p className="text-[var(--color-body)] leading-relaxed">
-            Ludwig Chen Li
-            <br />
-            Hupfeldstr. 6
-            <br />
-            34121 Kassel
-          </p>
+            Ludwig Chen Li<br />
+            Hupfeldstr. 6<br />
+            34121 Kassel</p>
         </div>
       </main>
       <Footer />

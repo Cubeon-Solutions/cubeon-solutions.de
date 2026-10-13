@@ -14,7 +14,7 @@ toc: false
 layout: "clean"
 ---
 
-## Angaben gemäß § 5 TMG
+## Angaben gemäß § 5 DDG
 
 **Cubeon Solutions UG (haftungsbeschränkt)**  
 Hupfeldstr. 6  

@@ -68,9 +68,16 @@ export async function POST(request: Request) {
   const name = (fields.name as string).trim();
   const email = (fields.email as string).trim();
   const message = (fields.message as string).trim();
+  if (fields.company !== undefined && typeof fields.company !== "string") {
+    return NextResponse.json({ error: "Bitte prüfen Sie die Angabe zu Ihrem Unternehmen." }, { status: 400 });
+  }
+  const company = ((fields.company as string | undefined) ?? "").trim();
+  if (company.length > 160 || /[\r\n\x00]/.test(company)) {
+    return NextResponse.json({ error: "Bitte geben Sie Ihr Unternehmen in einer Zeile mit maximal 160 Zeichen an." }, { status: 400 });
+  }
   if (!name || name.length > 120 || /[\r\n\x00]/.test(name) ||
-      email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || /[\r\n\x00]/.test(email) ||
-      !message || message.length > 5000 || message.includes("\x00")) {
+    email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || /[\r\n\x00]/.test(email) ||
+    !message || message.length > 5000 || message.includes("\x00")) {
     return NextResponse.json({ error: "Bitte prüfen Sie Name, E-Mail und Nachricht (maximal 5.000 Zeichen)." }, { status: 400 });
   }
   const apiKey = process.env.RESEND_API_KEY;
@@ -86,7 +93,10 @@ export async function POST(request: Request) {
       to: "kontakt@cubeon-solutions.de",
       replyTo: email,
       subject: `Neue Anfrage von ${name}`,
-      text: `Name: ${name}\nE-Mail: ${email}\n\n${message}`,
+      text: `Name: ${name}
+E-Mail: ${email}
+${company ? `Unternehmen: ${company}\n` : ""}
+${message}`,
     });
     if (error) throw new Error("Email provider rejected request");
     return NextResponse.json({ ok: true });

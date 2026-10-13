@@ -72,6 +72,20 @@ test('global cap applies even when senders change', async () => {
   assert.equal((await h.post(request({ ...valid, email: 'other@example.com' }))).status, 429);
   assert.equal(h.sent.length, 30);
 });
+test('optional company names are trimmed and included in the delivered enquiry', async () => {
+  const h = handler();
+  assert.equal((await h.post(request({ ...valid, company: '  Beispiel GmbH  ' }))).status, 200);
+  assert.ok(h.sent[0].text.includes('Unternehmen: Beispiel GmbH\n'));
+  assert.equal((await h.post(request({ ...valid, company: '' }))).status, 200);
+  assert.equal(h.sent[1].text.includes('Unternehmen:'), false);
+});
+test('invalid optional company names are rejected before delivery', async () => {
+  const h = handler();
+  for (const company of [null, {}, 42, 'x'.repeat(161), 'Firma\r\nZusatz', 'Firma\x00']) {
+    assert.equal((await h.post(request({ ...valid, company }))).status, 400);
+  }
+  assert.equal(h.sent.length, 0);
+});
 test('missing configuration and provider errors return controlled responses', async () => {
   assert.equal((await handler({ apiKey: '' }).post(request())).status, 503);
   const response = await handler({ fail: true }).post(request());

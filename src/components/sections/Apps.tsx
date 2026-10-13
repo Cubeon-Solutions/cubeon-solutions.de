@@ -1,24 +1,19 @@
-import { appsData } from "@/lib/data/apps";
+import Link from "next/link";
+import { orderedApps } from "@/lib/data/apps";
 import AppCard from "@/components/ui/AppCard";
+import ProductScroller from "@/components/ui/ProductScroller";
 
 export default function Apps() {
   return (
-    <section id="apps" className="py-20 bg-white">
-      <div className="mx-auto max-w-5xl px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--color-heading)] mb-4">
-            Portfolio
-          </h2>
-          <p className="text-[var(--color-body)] max-w-xl mx-auto">
-            Eigene Produkte, die unsere Expertise in der mobilen Entwicklung
-            zeigen — verfügbar im App Store und bei Google Play.
-          </p>
+    <section id="apps" aria-labelledby="products-heading" className="bg-[var(--color-bg-alt)] py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mb-10 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div className="max-w-2xl"><p className="section-kicker">Eigene Produkte</p><h2 id="products-heading" className="section-title">Profitieren Sie von unserer Erfahrung.</h2><p className="mt-5 leading-7">Unsere eigenen Apps begleiten wir von der Vision bis zum laufenden Betrieb. Die Erfahrung aus Entwicklung, Veröffentlichung und regelmäßigen Updates bringen wir in Ihr Projekt ein.</p></div>
+          <Link href="/apps" className="text-link shrink-0 text-sm">Alle Produkte ansehen <span aria-hidden="true">→</span></Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {appsData.map((app) => (
-            <AppCard key={app.slug} app={app} />
-          ))}
-        </div>
+        <ProductScroller labels={{ scrollLabel: "Eigene Apps – horizontal scrollbare Produktübersicht", previous: "Vorherige Produkte anzeigen", next: "Weitere Produkte anzeigen" }}>
+          {orderedApps.map((app) => <div key={app.slug} className="w-[min(78vw,20rem)] shrink-0 snap-start"><AppCard app={app} /></div>)}
+        </ProductScroller>
       </div>
     </section>
   );

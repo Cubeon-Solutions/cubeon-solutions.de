@@ -1,5 +1,37 @@
 @import "tailwindcss";
 
+.nav-services > summary::marker {
+  content: "";
+}
+
+.nav-services > summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-services[open] > summary .nav-services-chevron {
+  transform: rotate(180deg);
+}
+
+.product-scroller {
+  scrollbar-width: auto;
+  scrollbar-color: #1e50d4 #dbe4f0;
+}
+
+.product-scroller::-webkit-scrollbar {
+  height: 10px;
+}
+
+.product-scroller::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: #dbe4f0;
+}
+
+.product-scroller::-webkit-scrollbar-thumb {
+  border: 2px solid #dbe4f0;
+  border-radius: 999px;
+  background: #1e50d4;
+}
+
 @theme {
   --animate-heartbeat: heartbeat 2s ease-in-out infinite;
   --animate-fade-in-up: fade-in-up 0.6s ease both;
@@ -16,8 +48,91 @@
   --color-border: #e2e8f0;
 }
 
+[data-service="software"] {
+  --service-background: #eff8f3;
+  --service-border: #cbe4d6;
+  --service-accent: #24654d;
+}
+
+[data-service="apps"] {
+  --service-background: #eef4ff;
+  --service-border: #ccdafa;
+  --service-accent: #1e50d4;
+}
+
+[data-service="beratung"] {
+  --service-background: #f6f1fb;
+  --service-border: #dfd1ef;
+  --service-accent: #6b4594;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+section[id], main[id], h1, h2, h3 {
+  scroll-margin-top: 6rem;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+  hyphens: auto;
+  overflow-wrap: anywhere;
+}
+
+:where(a, button, summary, input, textarea):focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 4px;
+}
+
+:where(a, button, summary) {
+  touch-action: manipulation;
+}
+
+@layer components {
+  .section-kicker {
+    @apply mb-3 text-xs font-semibold uppercase tracking-widest;
+    color: var(--color-brand);
+  }
+  .section-title {
+    @apply text-3xl font-bold leading-tight sm:text-4xl;
+    color: var(--color-heading);
+  }
+  .button-primary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-6 py-3 font-semibold transition-colors;
+    background: var(--color-brand);
+    color: white;
+  }
+  .button-primary:hover { background: var(--color-brand-dark); }
+  .button-secondary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border px-6 py-3 font-semibold transition-colors;
+    border-color: var(--color-border);
+    background: white;
+    color: var(--color-heading);
+  }
+  .button-secondary:hover { background: var(--color-bg-alt); }
+  .text-link {
+    @apply font-semibold underline decoration-blue-200 underline-offset-4 transition-colors;
+    color: var(--color-brand);
+  }
+  .text-link:hover { color: var(--color-brand-dark); }
+  .service-link {
+    color: var(--service-accent);
+    text-decoration-color: var(--service-border);
+  }
+  .service-link:hover {
+    color: var(--service-accent);
+    text-decoration-color: currentColor;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 @keyframes fade-in-up {
